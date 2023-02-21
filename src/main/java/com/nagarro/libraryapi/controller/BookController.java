@@ -22,6 +22,11 @@ public class BookController {
 
 	@Autowired
 	private BookService bookService;
+	
+	@GetMapping("/")
+	public String message() {
+		return "Azure application deployed";
+	}
 
 	@GetMapping("/books")
 	public List<Books> getAllBooks() {
